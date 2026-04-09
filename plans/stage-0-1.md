@@ -9,6 +9,8 @@ Key decisions made before this plan:
 - **Submission code**: Lazy fetch — sync stores metadata only; code is fetched on-demand at submission detail view or at GitHub commit time (avoids 1000+ API calls on initial sync)
 - **Problem catalog**: Chunked seeder, not all-at-once; seed incrementally as user syncs
 
+**UI stack**: shadcn/ui (default style, slate base colour, CSS variables). Components are manually installed in `frontend/components/ui/` — do NOT run `npx shadcn-ui add` inside Docker since it requires interactive prompts. Add new components by hand following the same pattern as `button.tsx`, `card.tsx`, `input.tsx` etc. All shadcn components use `@radix-ui/*` primitives already declared in `package.json`.
+
 ---
 
 ## Critical Files to Create
