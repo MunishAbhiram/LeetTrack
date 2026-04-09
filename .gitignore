@@ -1,0 +1,8 @@
+.env
+.claude/
+
+backend/**/__pycache__/
+backend/celerybeat-schedule
+
+frontend/node_modules/
+frontend/.next/
